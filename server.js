@@ -49,7 +49,7 @@ app.get('/api/health', (req, res) => {
 });
 
 // Serve frontend static build in production
-const clientDistPath = path.join(__dirname, '../client/dist');
+const clientDistPath = __dirname;
 app.use(express.static(clientDistPath));
 
 // SPA catch-all fallback routing for direct URLs like /projects, /about, /admin
